@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; script-src 'self' 'unsafe-inline'; img-src 'self'; base-uri 'none'; form-action 'none'">
+  <link rel="stylesheet" href="../book.css">
+  <title>توفيق وشكري والبلح الملوّن</title>
+</head>
+<body>
+  <div class="shell">
+    <div class="topbar">
+      <a class="home" href="../">كل القصص</a>
+      <div class="story-name" id="storyName"></div>
+    </div>
+    <main class="book">
+      <section class="stage">
+        <div class="slide cover" id="cover">
+          <img id="coverImage">
+          <div class="cover-copy">
+            <span class="kicker">قصة مصوّرة للأطفال</span>
+            <h1 id="title"></h1>
+            <p class="subtitle" id="subtitle"></p>
+          </div>
+        </div>
+        <img class="slide page-image" id="art" hidden>
+      </section>
+      <div class="controls">
+        <button id="prev">→ السابق</button>
+        <div class="status"><strong id="label"></strong><span id="count"></span></div>
+        <button id="next">التالي ←</button>
+      </div>
+      <p class="tip">يمكنك استخدام مفاتيح الأسهم أو السحب على الشاشة.</p>
+    </main>
+  </div>
+  <script>
+    window.STORY={
+      title:'توفيق وشكري والبلح الملوّن',
+      subtitle:'لكل واحد ذوقه الخاص… والاختلاف لا يمنع الصداقة.',
+      cover:'cover.webp',
+      pages:[
+        '01-favorite-dates',
+        '02-shokry-offers-red-date',
+        '03-tawfik-tries-red-date',
+        '04-tawfik-offers-yellow-date',
+        '05-shokry-tries-yellow-date',
+        '06-small-disagreement',
+        '07-teacher-explains',
+        '08-different-tastes-same-friendship'
+      ].map((name,i)=>({src:`pages/${name}.webp`,alt:`المشهد ${i+1} من قصة توفيق وشكري والبلح الملوّن`}))
+    };
+  </script>
+  <script src="../book.js"></script>
+</body>
+</html>
+
