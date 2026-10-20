@@ -15,6 +15,7 @@
   document.querySelector('#title').textContent=s.title;
   document.querySelector('#subtitle').textContent=s.subtitle;
   coverImage.loading='eager';
+  coverImage.fetchPriority='high';
   coverImage.decoding='async';
   coverImage.src=s.cover;
   coverImage.alt=`غلاف قصة ${s.title}`;
