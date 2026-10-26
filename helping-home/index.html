@@ -1,30 +1,20 @@
-<!doctype html>
-<html lang="ar" dir="rtl">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; script-src 'self' 'unsafe-inline'; img-src 'self'; base-uri 'none'; form-action 'none'">
-  <link rel="stylesheet" href="../book.css">
-  <title>إيد في إيد… بيتنا يبقى سعيد</title>
-</head>
-<body>
-  <div class="shell">
-    <div class="topbar"><a class="home" href="../">كل القصص</a><div class="story-name" id="storyName"></div></div>
-    <main class="book">
-      <section class="stage">
-        <div class="slide cover" id="cover"><img id="coverImage"><span id="title" hidden></span><span id="subtitle" hidden></span></div>
-        <img class="slide page-image" id="art" hidden>
-      </section>
-      <div class="controls"><button id="prev">→ السابق</button><div class="status"><strong id="label"></strong><span id="count"></span></div><button id="next">التالي ←</button></div>
-      <p class="tip">يمكنك استخدام مفاتيح الأسهم أو السحب على الشاشة.</p>
-    </main>
-  </div>
-  <script>
-    window.STORY={title:'إيد في إيد… بيتنا يبقى سعيد',subtitle:'البيت مسؤوليتنا كلنا.',cover:'cover.webp',pages:[
-      '01-clean-room','02-clothes-in-place','03-after-breakfast','04-offers-help','05-washing-dishes','06-folding-clothes','07-sweeping-floor','08-shokry-drops-crumbs','09-messy-room','10-spilled-juice','11-mom-tired','12-tawfik-visits','13-tawfik-advises','14-shared-responsibility','15-shokry-notices','16-shokry-apologizes','17-picks-up-toys','18-cleans-mess','19-folds-with-mom','20-clean-happy-home'
-    ].map((name,i)=>({src:`pages/${name}.webp`,alt:`المشهد ${i+1} من قصة إيد في إيد… بيتنا يبقى سعيد`}))};
-  </script>
-  <script src="../book.js"></script>
-</body>
-</html>
-
+<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; script-src 'self' 'unsafe-inline'; img-src 'self'; base-uri 'none'; form-action 'none'"><link rel="stylesheet" href="../dialogue-book.css"><title>إيد في إيد… بيتنا يبقى سعيد</title></head><body><div class="shell"><div class="topbar"><a class="home" href="../">كل القصص</a><div class="story-name" id="storyName"></div></div><main class="book"><section class="stage"><div class="cover" id="cover"><img id="coverImage"></div><article class="story-page" id="storyPage" hidden><img class="page-image" id="art"><section class="script-panel"><span class="page-no" id="pageNo"></span><p class="narrator" id="narrator"></p><div id="dialogue"></div></section></article></section><div class="controls"><button id="prev">→ السابق</button><div class="status"><strong id="label"></strong><span id="count"></span></div><button id="next">التالي ←</button></div><p class="tip">يمكنك استخدام مفاتيح الأسهم أو السحب على الشاشة.</p></main></div><script>window.STORY={title:'إيد في إيد… بيتنا يبقى سعيد',cover:'cover.webp',pages:[{src:'clean-pages/01-clean-room.webp',alt:'المشهد 1 من قصة إيد في إيد… بيتنا يبقى سعيد',narrator:"في صباحٍ جميل، نظر توفيق إلى غرفته المرتبة.",lines:[{speaker:"توفيق",text:"يا سلام! المكان النظيف يخلّيني مبسوط.",kind:""}]},
+{src:'clean-pages/02-clothes-in-place.webp',alt:'المشهد 2 من قصة إيد في إيد… بيتنا يبقى سعيد',narrator:"وقبل أن يخرج، أعاد ملابسه إلى مكانها.",lines:[{speaker:"توفيق",text:"مش هسيب هدومي على الأرض… كل حاجة ليها مكان.",kind:""}]},
+{src:'clean-pages/03-after-breakfast.webp',alt:'المشهد 3 من قصة إيد في إيد… بيتنا يبقى سعيد',narrator:"وبعد الإفطار، حمل توفيق الكوب والطبق إلى المطبخ.",lines:[{speaker:"ماما توفيق",text:"شكرًا يا توفيق إنك لمّيت حاجتك.",kind:"mama-tawfik"}]},
+{src:'clean-pages/04-offers-help.webp',alt:'المشهد 4 من قصة إيد في إيد… بيتنا يبقى سعيد',narrator:"وجد توفيق ماما تغسل الصحون، فاقترب منها.",lines:[{speaker:"توفيق",text:"ممكن أساعدك يا ماما؟",kind:""}]},
+{src:'clean-pages/05-washing-dishes.webp',alt:'المشهد 5 من قصة إيد في إيد… بيتنا يبقى سعيد',narrator:"وقف توفيق بجوار ماما، وبدآ العمل معًا.",lines:[{speaker:"توفيق",text:"أنا هغسل الأطباق، وإنتِ نشّفيها.",kind:""},{speaker:"ماما توفيق",text:"لما نساعد بعض، الشغل يخلص أسرع!",kind:"mama-tawfik"}]},
+{src:'clean-pages/06-folding-clothes.webp',alt:'المشهد 6 من قصة إيد في إيد… بيتنا يبقى سعيد',narrator:"وبعدها، جلسا ليطبّقا الملابس.",lines:[{speaker:"ماما توفيق",text:"برافو يا توفيق! كده وفّرت عليّا وقت ومجهود.",kind:"mama-tawfik"}]},
+{src:'clean-pages/07-sweeping-floor.webp',alt:'المشهد 7 من قصة إيد في إيد… بيتنا يبقى سعيد',narrator:"ثم أمسك توفيق المكنسة، وماما أمسكت الجاروف.",lines:[{speaker:"ماما توفيق",text:"لو كل واحد نظّف مكانه، البيت هيفضل جميل.",kind:"mama-tawfik"}]},
+{src:'clean-pages/08-shokry-drops-crumbs.webp',alt:'المشهد 8 من قصة إيد في إيد… بيتنا يبقى سعيد',narrator:"وفي بيت شكري، كان يأكل ويلقي الفتات حوله.",lines:[{speaker:"شكري",text:"مش مشكلة… ماما هتنظّفه بعدين!",kind:"shokry"}]},
+{src:'clean-pages/09-messy-room.webp',alt:'المشهد 9 من قصة إيد في إيد… بيتنا يبقى سعيد',narrator:"دخلت ماما غرفة شكري، فوجدتها مليئة بالألعاب والملابس.",lines:[{speaker:"ماما شكري",text:"يا شكري، رتّب ألعابك من فضلك.",kind:"mama-shokry"},{speaker:"شكري",text:"بعدين يا ماما… أنا بلعب دلوقتي.",kind:"shokry"}]},
+{src:'clean-pages/10-spilled-juice.webp',alt:'المشهد 10 من قصة إيد في إيد… بيتنا يبقى سعيد',narrator:"وأثناء اللعب، اصطدم شكري بالطاولة وسقط العصير.",lines:[{speaker:"شكري",text:"أوه! العصير وقع.",kind:"shokry"}]},
+{src:'clean-pages/11-mom-tired.webp',alt:'المشهد 11 من قصة إيد في إيد… بيتنا يبقى سعيد',narrator:"بدأت ماما تنظف الفتات والعصير وتحمل الملابس وحدها.",lines:[{speaker:"ماما شكري",text:"أنا بتعب لما أنضّف البيت لوحدي يا شكري.",kind:"mama-shokry"}]},
+{src:'clean-pages/12-tawfik-visits.webp',alt:'المشهد 12 من قصة إيد في إيد… بيتنا يبقى سعيد',narrator:"وصل توفيق لزيارة شكري، وكاد يتعثر في لعبة على الأرض.",lines:[{speaker:"توفيق",text:"خلي بالك! الألعاب على الأرض ممكن توقّع حد.",kind:""}]},
+{src:'clean-pages/13-tawfik-advises.webp',alt:'المشهد 13 من قصة إيد في إيد… بيتنا يبقى سعيد',narrator:"لاحظ توفيق أن ماما شكري متعبة، فتحدث مع صديقه.",lines:[{speaker:"توفيق",text:"ماما بتتعب علشان البيت يفضل نضيف. مش صح نسيبها تنظّف لوحدها.",kind:""},{speaker:"شكري",text:"معاك حق… أنا ما فكّرتش إن ده بيتعبها.",kind:"shokry"}]},
+{src:'clean-pages/14-shared-responsibility.webp',alt:'المشهد 14 من قصة إيد في إيد… بيتنا يبقى سعيد',narrator:"أشار توفيق إلى الألعاب والمكنسة.",lines:[{speaker:"توفيق",text:"البيت مش مسؤولية ماما لوحدها… البيت مسؤوليتنا كلنا.",kind:""}]},
+{src:'clean-pages/15-shokry-notices.webp',alt:'المشهد 15 من قصة إيد في إيد… بيتنا يبقى سعيد',narrator:"نظر شكري إلى ماما وهي تحمل سلة ثقيلة، وشعر بالندم.",lines:[{speaker:"شكري",text:"ماما تعبت بسببي… وأنا كان ممكن أساعدها.",kind:"shokry"}]},
+{src:'clean-pages/16-shokry-apologizes.webp',alt:'المشهد 16 من قصة إيد في إيد… بيتنا يبقى سعيد',narrator:"اقترب شكري من ماما، وكان واضحًا على وجهه أنه نادم.",lines:[{speaker:"شكري",text:"أنا آسف يا ماما. مش هسيبك تنظّفي لوحدك تاني.",kind:"shokry"},{speaker:"ماما شكري",text:"فرحانة إنك فهمت يا حبيبي.",kind:"mama-shokry"}]},
+{src:'clean-pages/17-picks-up-toys.webp',alt:'المشهد 17 من قصة إيد في إيد… بيتنا يبقى سعيد',narrator:"بدأ شكري يجمع ألعابه في السلة.",lines:[{speaker:"شكري",text:"هرتّب ألعابي علشان محدّش يتعثر فيها.",kind:"shokry"}]},
+{src:'clean-pages/18-cleans-mess.webp',alt:'المشهد 18 من قصة إيد في إيد… بيتنا يبقى سعيد',narrator:"ثم أحضر الفوطة والجاروف ونظف مكان العصير والفتات.",lines:[{speaker:"ماما شكري",text:"برافو يا شكري! كده أنت بتساعد بجد.",kind:"mama-shokry"}]},
+{src:'clean-pages/19-folds-with-mom.webp',alt:'المشهد 19 من قصة إيد في إيد… بيتنا يبقى سعيد',narrator:"وجلس شكري بجوار ماما ليطبّقا الملابس معًا.",lines:[{speaker:"ماما شكري",text:"مساعدتك فرّحتني.",kind:"mama-shokry"},{speaker:"شكري",text:"وأنا مبسوط إننا بننجز سوا!",kind:"shokry"}]},
+{src:'clean-pages/20-clean-happy-home.webp',alt:'المشهد 20 من قصة إيد في إيد… بيتنا يبقى سعيد',narrator:"صار البيت نظيفًا، واجتمع الجميع وهم سعداء.",lines:[{speaker:"توفيق",text:"نرتّب حاجتنا، وننظّف مكاننا.",kind:""},{speaker:"شكري",text:"ونساعد ماما وبابا… لأن البيت مسؤوليتنا كلنا!",kind:"shokry"}]}]};</script><script src="../dialogue-book.js"></script></body></html>
