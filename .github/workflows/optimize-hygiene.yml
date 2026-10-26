@@ -1,0 +1,33 @@
+name: Optimize hygiene story images
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'hygiene/source-pages/*.png'
+      - 'hygiene/cover-source.png'
+permissions:
+  contents: write
+jobs:
+  convert:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install WebP tools
+        run: sudo apt-get update && sudo apt-get install -y webp
+      - name: Convert story images
+        run: |
+          mkdir -p hygiene/pages
+          for f in hygiene/source-pages/*.png; do
+            name=$(basename "$f" .png)
+            cwebp -quiet -q 70 -resize 960 640 "$f" -o "hygiene/pages/$name.webp"
+          done
+          cwebp -quiet -q 72 -resize 960 640 hygiene/cover-source.png -o hygiene/cover-art.webp
+      - name: Commit optimized images
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add hygiene/pages hygiene/cover-art.webp
+          if ! git diff --cached --quiet; then
+            git commit -m "Optimize hygiene story images"
+            git push
+          fi
