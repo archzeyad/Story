@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; script-src 'self' 'unsafe-inline'; img-src 'self'; base-uri 'none'; form-action 'none'">
+  <link rel="stylesheet" href="../dialogue-book.css">
+  <title>لانش بوكس ماما</title>
+</head>
+<body>
+  <div class="shell">
+    <div class="topbar">
+      <a class="home" href="../">كل القصص</a>
+      <div class="story-name" id="storyName"></div>
+    </div>
+    <main class="book">
+      <section class="stage">
+        <div class="cover" id="cover"><img id="coverImage" decoding="async" fetchpriority="high"></div>
+        <article class="story-page" id="storyPage" hidden>
+          <img class="page-image" id="art" decoding="async">
+          <section class="script-panel">
+            <span class="page-no" id="pageNo"></span>
+            <p class="narrator" id="narrator"></p>
+            <div id="dialogue"></div>
+          </section>
+        </article>
+      </section>
+      <div class="controls">
+        <button id="prev">→ السابق</button>
+        <div class="status"><strong id="label"></strong><span id="count"></span></div>
+        <button id="next">التالي ←</button>
+      </div>
+      <p class="tip">يمكنك استخدام مفاتيح الأسهم أو السحب على الشاشة.</p>
+    </main>
+  </div>
+  <script>
+    window.STORY={
+      title:'لانش بوكس ماما',
+      cover:'cover.webp',
+      pages:[
+        {src:'pages/01-break-time.webp',alt:'توفيق وشكري في بداية البريك',narrator:'رنّ جرس البريك، وفتح الصديقان شنط الأكل.',lines:[{speaker:'توفيق',text:'يلا يا شكري، نفطر سوا!',kind:''},{speaker:'شكري',text:'أنا جعان أوي!',kind:'shokry'}]},
+        {src:'pages/02-healthy-lunchbox.webp',alt:'توفيق يفتح اللانش بوكس الصحي',narrator:'فتح توفيق اللانش بوكس اللي حضّرته له ماما.',lines:[{speaker:'توفيق',text:'ساندويتش وخيار وتفاح ومية… تسلم إيد ماما!',kind:''}]},
+        {src:'pages/03-canteen-choice.webp',alt:'شكري يشتري شيبسي وبيبسي من الكانتين',narrator:'لكن شكري ترك لانش البيت وجرى على الكانتين.',lines:[{speaker:'شكري',text:'أنا هجيب شيبسي وبيبسي!',kind:'shokry'}]},
+        {src:'pages/04-back-to-table.webp',alt:'شكري يعود بالشيبسي والبيبسي',narrator:'رجع شكري فرحان، وحطّ اللانش بوكس بتاعه على جنب.',lines:[{speaker:'توفيق',text:'طب واللانش اللي ماما حضّرته لك؟',kind:''},{speaker:'شكري',text:'هاكله بعدين!',kind:'shokry'}]},
+        {src:'pages/05-tawfik-warns.webp',alt:'توفيق ينصح شكري بالأكل الصحي',narrator:'حاول توفيق ينصح صاحبه بهدوء.',lines:[{speaker:'توفيق',text:'الشيبسي والبيبسي ممكن يتعبوا بطنك. أكل البيت أحسن.',kind:''},{speaker:'شكري',text:'متقلقش… أنا تمام!',kind:'shokry'}]},
+        {src:'pages/06-shokry-eats.webp',alt:'شكري يأكل الشيبسي ويشرب البيبسي',narrator:'لم يسمع شكري النصيحة، وأكل بسرعة.',lines:[{speaker:'شكري',text:'طعمهم حلو أوي!',kind:'shokry'},{speaker:'توفيق',text:'صحتك أهم من الطعم يا شكري.',kind:''}]},
+        {src:'pages/07-pain-begins.webp',alt:'شكري يشعر ببداية ألم البطن',narrator:'وبعد شوية، اختفت ابتسامة شكري.',lines:[{speaker:'شكري',text:'استنى… بطني بدأت توجعني.',kind:'shokry'},{speaker:'توفيق',text:'اهدأ، أنا جنبك.',kind:''}]},
+        {src:'pages/08-strong-stomach-ache.webp',alt:'شكري يتألم وتوفيق يساعده',narrator:'زاد الوجع، فمسك شكري بطنه بقوة.',lines:[{speaker:'شكري',text:'آه يا بطني!',kind:'shokry'},{speaker:'توفيق',text:'لازم نقول للميس فورًا.',kind:''}]},
+        {src:'pages/09-teacher-helps.webp',alt:'الميس الزرافة تسأل شكري عما حدث',narrator:'جاءت الميس الزرافة بسرعة لتطمئن عليه.',lines:[{speaker:'الميس الزرافة',text:'إيه اللي حصل يا شكري؟',kind:'teacher'},{speaker:'شكري',text:'أكلت شيبسي وشربت بيبسي… وبطني وجعتني.',kind:'shokry'}]},
+        {src:'pages/10-to-clinic.webp',alt:'الميس وتوفيق يساعدان شكري في الذهاب للدكتور',narrator:'ساعدت الميس شكري وهو ماشي ناحية العيادة.',lines:[{speaker:'الميس الزرافة',text:'يلا نروح للدكتور الراكون.',kind:'teacher'},{speaker:'توفيق',text:'أنا معاك يا شكري.',kind:''}]},
+        {src:'pages/11-doctor-examines.webp',alt:'الدكتور الراكون يفحص شكري',narrator:'فحص الدكتور الراكون بطن شكري بهدوء.',lines:[{speaker:'الدكتور الراكون',text:'هفحصك، وإن شاء الله ترتاح.',kind:'doctor'},{speaker:'شكري',text:'بطني بتوجعني أوي.',kind:'shokry'}]},
+        {src:'pages/12-shokry-explains.webp',alt:'شكري يخبر الدكتور بما أكله',narrator:'سأل الدكتور عن الأكل اللي سبق الوجع.',lines:[{speaker:'الدكتور الراكون',text:'أكلت إيه قبل ما بطنك توجعك؟',kind:'doctor'},{speaker:'شكري',text:'شيبسي وبيبسي… وسيبت أكل ماما.',kind:'shokry'}]},
+        {src:'pages/13-healthy-advice.webp',alt:'الدكتور الراكون يشرح الاختيار الصحي',narrator:'أشار الدكتور إلى اللانش الصحي والمية.',lines:[{speaker:'الدكتور الراكون',text:'الأفضل نبعد عن الشيبسي والمشروبات الغازية، ونختار أكل البيت والمية.',kind:'doctor'}]},
+        {src:'pages/14-shokry-promises.webp',alt:'شكري يعد باختيار الطعام الصحي',narrator:'فهم شكري سبب تعبه، وقرر يصلّح اختياره.',lines:[{speaker:'شكري',text:'مش هبدّل لانش ماما بالشيبسي والبيبسي تاني.',kind:'shokry'},{speaker:'توفيق',text:'برافو عليك!',kind:''}]},
+        {src:'pages/15-healthy-next-day.webp',alt:'شكري يفتح لانش بوكس صحي في اليوم التالي',narrator:'في اليوم التالي، جاء شكري بلانش البيت.',lines:[{speaker:'شكري',text:'بص يا توفيق… النهارده هاكل اللانش الصحي!',kind:'shokry'},{speaker:'توفيق',text:'اختيار ممتاز!',kind:''}]},
+        {src:'pages/16-happy-healthy-break.webp',alt:'توفيق وشكري يستمتعان بالأكل الصحي',narrator:'قعد الصاحبين ياكلوا وهما فرحانين، وبطن شكري كانت مرتاحة.',lines:[{speaker:'شكري',text:'أكل البيت طيب وبيخلّيني نشيط!',kind:'shokry'},{speaker:'توفيق',text:'صحتنا تبدأ من اختيارنا.',kind:''}]}
+      ]
+    };
+  </script>
+  <script src="../dialogue-book.js"></script>
+</body>
+</html>
+
